@@ -1,0 +1,32 @@
+
+<br><div class="container">
+    <div class="card-header border"><h2 style="text-align:center">All Available Rides</h2></div>
+    <div class="card-body border">
+<table class="table table-bordered table-striped table-sm table-hover table-responsive">
+    <thead style="text-align: center">
+        <tr>
+            <th scope="col">Fare Id</th>
+            <th scope="col">Source</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Fare</th>
+            <th scope="col"> Actions</th>
+        </tr>
+    </thead>
+    <tbody style="text-align: center">
+        <tr *ngFor="let fare of fares; let i=index;"
+            style="cursor: pointer;">
+            <td>{{ fare.fareId }}</td>
+            <td>{{ fare.source }}</td>
+            <td>{{ fare.destination }}</td>
+            <td>{{ fare.fare | currency:'INR':'symbol'}}</td>
+            <td>&nbsp;&nbsp;<button (click)="deleteFare(fare.fareId)" class='btn btn-warning'>Delete</button>&nbsp;&nbsp;
+                <button (click)="updateFare(fare.fareId,fare.source,fare.destination,fare.fare)" class='btn btn-primary' >Update</button>  
+            </td>
+        </tr>
+    </tbody>
+    
+</table>
+<button (click)="Add()" class='btn btn-primary' style="width:100%">Add Fare Route</button>
+</div>
+</div>
+

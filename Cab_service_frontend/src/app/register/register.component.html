@@ -1,0 +1,45 @@
+<body class="main">
+    <div class="card">
+        <div class="internalCard">
+        <form id="loginForm" #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+            <label for="userid">UserName</label>
+            <input type="text"
+            ngModel
+            name="userName"
+            id="userName"
+            placeholder="Enter your username"
+            class="form-control mb-3"
+            >
+            <label for="UserFirstName">UserFirstName</label>
+            <input type="text"
+            ngModel
+            name="userFirstName"
+            id="userFirstName"
+            placeholder="Enter your user firstname"
+            class="form-control mb-3"
+            >
+            <label for="UserLastName">UserLastName</label>
+            <input type="text"
+            ngModel
+            name="userLastName"
+            id="userLastName"
+            placeholder="Enter your user lastname"
+            class="form-control mb-3"
+            >
+            <label for="Password">Password</label>
+            <input type="password"
+            ngModel
+            name="userPassword"
+            id="userPassword"
+            placeholder="Enter your password"
+            class="form-control mb-3"
+            >
+
+            <input type="submit"
+            value="Register"
+            id="btn"
+            class="btn btn-outline-primary form-control rounded-0">
+        </form>
+    </div>
+</div>
+</body>

@@ -1,0 +1,60 @@
+<!-- <div class="container mt-5">
+    <div class="card" style="padding: 20px;">
+        <h2 style="text-align: center;" class="text-primary">Login Page</h2><br>
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+            <input type="text"
+            ngModel
+            name="userName"
+            id="userName"
+            placeholder="Enter your username"
+            class="form-control mb-3"
+            >
+
+            <input type="password"
+            ngModel
+            name="userPassword"
+            id="userPassword"
+            placeholder="Enter your password"
+            class="form-control mb-3"
+            >
+
+            <input type="submit"
+            value="Login"
+            class="btn btn-outline-primary form-control rounded-0">
+        </form>
+    </div>
+</div> -->
+
+<body class="main">
+    <div class="row" style="text-align: center;">
+        <div class="col-md-7" id="hello">
+            
+            </div>
+            <div class="col-md-5">
+    <div class="card">
+        <div class="internalCard">
+            <form id="loginForm" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+            <label for="userid">UserID</label>
+            <input id="userid" type="text" ngModel
+            name="userName"
+            id="userName"
+            placeholder="Enter your username"/>
+
+
+            <label for="password">Password</label>
+            <input id="password" type="password" ngModel
+            name="userPassword"
+            id="userPassword"
+            placeholder="Enter your password"/>
+
+            
+            <input id="btn" type="submit"
+            value="Login"
+            class="btn btn-outline-primary form-control rounded-0 " [class.spinner]="loading" [disabled]="loading" >
+            <button [class.spinner]="loading" [disabled]="loading" style="background-color: transparent; border-color: transparent     ;"></button>
+        </form>
+        </div>
+    </div>
+    </div>
+</div>
+  </body>

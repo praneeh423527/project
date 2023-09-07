@@ -1,0 +1,43 @@
+<br><div class="container">
+    <div class="card-header border"><h2 style="text-align:center">Helpline Tickets</h2></div>
+    <div class="card-body border">
+<table class="table table-bordered table-striped table-sm table-hover table-responsive">
+    <thead style="text-align: center">
+        <tr>
+            <th scope="col">Help Id</th>
+            <th scope="col">Booking Id</th>
+            <th scope="col">TravelDate</th>
+            <th scope="col">Description</th>
+            <th scope="col">Remarks</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody style="text-align: center">
+        <tr *ngFor="let help of helps; let i=index;"
+            style="cursor: pointer;">
+            <td>{{ help.helpid }}</td>
+            <td>{{ help.bookingid }}</td>
+            <td>{{ help.traveldate }}</td>
+            <td>{{ help.description}}</td>
+            <!-- <td>*ngIf="condition"<input type="text"></td> -->
+
+            <td>
+
+                <div *ngIf="help.remark==null">
+                    
+                    <input type="text"  value="Sydney" [(ngModel)]="remark">
+                  </div>
+                  
+                  <div *ngIf="help.remark">
+                   {{help.remark}}
+                  </div>
+            </td>
+            <td>&nbsp;&nbsp;<button  (click)="myFunc(help.helpid,remark)" formtarget="_blank" class='btn btn-warning'>Update Remark</button>&nbsp;&nbsp;
+            </td>
+        </tr>
+    </tbody>
+    
+</table>
+
+</div>
+</div>

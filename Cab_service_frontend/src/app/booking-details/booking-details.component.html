@@ -1,0 +1,40 @@
+<div class="container">
+    <br>
+<div class="card-header border">
+<h2 style="text-align: center;">All Booking Details</h2>
+</div>
+<div class="card-body border">
+    
+    <div class="text-center">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Booking Id</th>
+                    <th scope="col">Source</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Fare</th>
+                    <th scope="col">Travel Date</th>
+                    <th scope="col">UserMobile</th>
+                    <th scope="col">Status</th>
+            
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ride of rides">
+                    <td>{{ ride.bookingId }}</td>
+                    <td>{{ ride.source }}</td>
+                    <td>{{ ride.destination }}</td>
+                    <td>{{ ride.fare | currency:'INR':'symbol'}}</td>
+                    <td>{{ ride.travelDate | date:'mediumDate'}}</td>
+                    <td>{{ride.userMobile}}</td>
+                    {{status(ride.status)}}
+                    <td class="text-primary"><b><i>{{Status}}</i></b></td>
+
+
+                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>

@@ -1,0 +1,43 @@
+<div class="container">
+    <br>
+    <div class="card-header border">
+  <h3 style="text-align:center">Help Component</h3>
+  </div>
+  <div class="card-body border">
+    <form ngForm #data = "ngForm" (ngSubmit)="onSubmit(data.value)">
+      <div class="form-group">
+        <label for="name">Id</label>
+        <input type="number" readonly="readonly" class="form-control"  required [(ngModel)]="id"  name="id" ngModel>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="name">Source</label>
+        <input type="text" readonly="readonly" class="form-control"  required [(ngModel)]="traveldate" name="traveldate" ngModel >
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="name">Source</label>
+        <input type="number" readonly="readonly" class="form-control"  required [(ngModel)]="mobile" name="mobile" ngModel >
+      </div>
+      <br>
+      
+      <div class="form-group">
+        <label for="name">Help Description</label>
+        <input type="text" class="form-control"  required  name="description" ngModel>
+      </div>
+      <br> 
+       <!--
+      <div class="form-group">
+          <label for="name">Fare</label>
+          <input type="number" class="form-control"  required [(ngModel)]="Fare" name="fare" ngModel>
+        </div>
+        <br> -->
+  
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      &nbsp;
+   
+    <button type="submit"  routerLink="/helpticketbyid" class="btn btn-warning btn-block">HelpTickets</button>
+  </form>
+  </div>
+  </div>
+  

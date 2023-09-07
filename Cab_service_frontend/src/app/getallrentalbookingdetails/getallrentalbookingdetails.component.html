@@ -1,0 +1,39 @@
+<div class="container">
+    <br>
+<div class="card-header border">
+<h2 style="text-align: center;">All Rental Car Booking Details</h2>
+</div>
+<div class="card-body border">
+    
+    <div class="text-center">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Booking Id</th>
+                    <th scope="col">Rentals_id</th>
+                    <th scope="col">Carname</th>
+                    <th scope="col">Fare</th>
+                    <th scope="col">Mobilenumber</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Emailid</th>
+                    <th scope="col">Status</th>
+            
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ride of materials">
+                    <td>{{ ride.bookingid }}</td>
+                    <td>{{ ride.rentals_id }}</td>
+                    <td><a href={{ride.car_image}}>{{ ride.carname }}</a></td>
+                    <td>{{ ride.price | currency:'INR':'symbol'}}</td>
+                    <td>{{ ride.mobilenumber}}</td>
+                    <!-- <td>{{ride.availability}}</td> -->
+                    <td>{{ ride.date }}</td>
+                    <td>{{ ride.emailid}}</td>
+                    <td class="text-primary" ><i>Booked</i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>

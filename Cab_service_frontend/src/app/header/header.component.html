@@ -1,0 +1,119 @@
+<nav class="navbar navbar-expand-lg navbar-dark " id="color">
+    <div class="container-fluid">
+      <!-- <img src="https://e7.pngegg.com/pngimages/90/282/png-clipart-taxi-bus-car-computer-icons-taxi-logos-angle-car.png"> -->
+      <a class="navbar-brand" href="/">Cab-Service</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/admin"
+            *ngIf="userService.roleMatch(['Admin'])"
+            >Admin Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/user"
+            *ngIf="userService.roleMatch(['User'])"
+            >User Dashboard</a>
+          </li>
+
+
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/bookRide"
+            *ngIf="userService.roleMatch(['User'])"
+            >Book Ride</a>
+            <!-- <button [routerLink]="['/bookRide']" class="btn btn-primary">Book Ride</button> -->
+           </li>
+           <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/updateRide"
+            *ngIf="userService.roleMatch(['User'])"
+            >Update Ride</a>
+            <!-- <button [routerLink]="['/updateRide']" class="btn btn-primary">Update Ride</button> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/cancelRide"
+            *ngIf="userService.roleMatch(['User'])"
+            >Cancel Ride</a>
+            <!-- <button [routerLink]="['/cancelRide']" class="btn btn-primary">Cancel Ride</button> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/fetch"
+            *ngIf="userService.roleMatch(['Admin'])"
+            >All Rides</a>
+              <!-- <button [routerLink]="['/fetch']" class="btn btn-primary">All Rides</button> -->
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/addfaredetails"
+            *ngIf="userService.roleMatch(['Admin'])"
+            >Add Fare Details</a>
+            
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/update"
+            *ngIf="userService.roleMatch(['Admin'])"
+            >Update Fare</a>
+             
+            </li> -->
+
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/bookingdetails"
+            *ngIf="userService.roleMatch(['Admin'])"
+            >BookingDetails</a>
+              <!-- <button [routerLink]="['/bookingdetails']" class="btn btn-primary">BookingDetails</button> -->
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/help"
+            *ngIf="userService.roleMatch(['User'])"
+            >Help</a>
+            
+            </li> -->
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/helpticket"
+            *ngIf="userService.roleMatch(['Admin'])"
+            >HelpTickets</a>
+              <!-- <button [routerLink]="['/bookingdetails']" class="btn btn-primary">BookingDetails</button> -->
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/carrentals"
+            *ngIf="userService.roleMatch(['Admin'])"
+            >Car Rentals</a>
+              <!-- <button [routerLink]="['/bookingdetails']" class="btn btn-primary">BookingDetails</button> -->
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/Rentalcars"
+            *ngIf="userService.roleMatch(['User'])"
+            >Book Car</a>
+              <!-- <button [routerLink]="['/bookingdetails']" class="btn btn-primary">BookingDetails</button> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/Getallrentalbookingdetails"
+            *ngIf="userService.roleMatch(['Admin'])"
+            >Rental Car Booking Details</a>
+              <!-- <button [routerLink]="['/bookingdetails']" class="btn btn-primary">BookingDetails</button> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/getrentalookingdetailsbyid"
+            *ngIf="userService.roleMatch(['User'])"
+            >Rental Car Booking Details</a>
+              <!-- <button [routerLink]="['/bookingdetails']" class="btn btn-primary">BookingDetails</button> -->
+            </li>
+
+
+
+            
+        </ul>
+        <button *ngIf="! isLoggedIn()" type="button" class="btn btn-warning" routerLink="/login">Login</button>
+        <button *ngIf="isLoggedIn()" type="button" class="btn btn-danger" (click)="logout()" >Logout</button>&nbsp;
+        <button *ngIf="! isLoggedIn()" type="button" class="btn btn-success" routerLink="/register">Register</button>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,49 @@
+<br>
+<div class="container">
+    
+  <div class="row">
+    <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-3" *ngFor="let fd of materials">
+      <div class="card shadow p-3 mb-5 bg-body rounded" id="bikeCard">
+        <img src="{{fd.car_image}}" style="border-radius: 10%; border: 1px solid black" height="200" width="200" class="card-img-top" alt="{{fd.brandName}} {{fd.modelName}}" />
+        <div class="card-body">
+          <!-- <h3 class="card-title">{{fd.carname}}</h3>
+          <h4 class="pb-2">{{fd.modelName}}</h4> -->
+          <table>
+            <Caption></Caption>
+            <th></th>
+            <Caption></Caption>
+            <tr>
+                <td><h2><strong>{{fd.carname}}</strong></h2> </td>
+            </tr>
+            <tr>
+              <td><strong>Rent Amount:</strong> {{fd.price}}₹ Per day</td>
+            </tr>
+            <tr>
+              <td><strong>Pickup Location:</strong> {{fd.location}}</td>
+            </tr>
+            <tr>
+                <td><strong>Car Number:</strong> {{fd.carnumber}}</td>
+              </tr>
+            <tr>
+              <td><strong>Availability:</strong> {{fd.availability}}</td>
+          </table>
+          <div class="btn-group-justified text-center pt-2">
+            <!-- <button type="button" (click)='getBikeById(fd.rentals_id)'
+              class="align-self-end btn btn-primary btn-sm">Details</button>&nbsp; -->
+            <button type="button" (click)='Bookcar(fd)'
+              class="align-self-end btn btn-warning btn-md">Book Car</button>&nbsp;
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <pagination-controls (pageChange)="page = $event"></pagination-controls> -->
+<!-- </div> -->
+<!-- <div class="d-grid gap-2">
+    <button type="button" 
+        class="btn btn-block btn-warning" routerLink="/Addcars">
+        Add Car
+    </button></div>
+    <br>
+</div> -->

@@ -1,0 +1,56 @@
+
+<br>
+<h1 style="text-align: center;"><b><strong>Booking Details Confirmation</strong></b></h1>
+<br>
+
+<div class="container border bg-dark text-white">
+      <br>
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <img src="{{data.car_image}}" style="border-radius: 10%; border: 1px solid black" height="200" wdith="200" class="card-img-top"  />
+   
+        </div>
+        <div class="col-12 col-md-4">
+            <h2>&nbsp; &nbsp;  Car Name: <strong>{{data.carname}}</strong></h2>
+            <h2>&nbsp; &nbsp;  Car Price Per-Day: <strong>{{data.price}} ₹</strong></h2>
+            <h2>&nbsp; &nbsp;  Car Number: <strong>{{data.carnumber}}</strong></h2>
+            <h2>&nbsp; &nbsp;  Car Location: <strong>{{data.location}}</strong></h2>
+        </div>
+        <div class="col-12 col-md-4">
+            <h2>&nbsp; &nbsp;  Car Id: <strong>{{data.rentals_id}}</strong></h2>
+            <h2>&nbsp; &nbsp;   Car Availability: <strong>{{data.availability}}</strong></h2>
+            
+        </div>
+      </div>
+      <br>
+</div>
+
+
+<div class="container">
+    <br>
+    <div class="card-header border">
+  <h3 style="text-align:center">{{data.carname}} Booking Confirmation</h3>
+  </div>
+  <div class="card-body border">
+    <form ngForm #datavalue = "ngForm" (ngSubmit)="onSubmit(datavalue.value)">
+      <br>
+      <div class="form-group">
+        <label for="name">Mobile Number</label>
+        <input type="number" class="form-control"  required  name="mobilenumber" ngModel >
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="name">Email Id</label>
+        <input type="text" class="form-control"  required   name="emailid" ngModel>
+      </div>
+      <br>
+      <div class="form-group">
+          <label for="name">Date</label>
+          <input type="date" class="form-control"  required  name="date" ngModel>
+        </div>
+        <br>
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+  </div>
+  </div>
+  
